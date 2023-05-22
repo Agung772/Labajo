@@ -102,38 +102,53 @@ public class PlayerController : MonoBehaviour
 
         if (moveAnimasi > 0)
         {
-
+            animator.SetBool("Idle", false);
             animator.SetFloat("X", horizontal);
             animator.SetFloat("Z", vertical);
+
+            animator.SetFloat("IdleX", 0);
+            animator.SetFloat("IdleZ", 0);
         }
 
         else
         {
-            
+            animator.SetBool("Idle", true);
+
+            animator.SetFloat("X", 0);
+            animator.SetFloat("Z", 0);
+
+
+
             if (angle < 35f)
             {
                 //print("Belakang");
-                animator.SetFloat("X", 0);
-                animator.SetFloat("Z", -1);
+                animator.SetFloat("IdleX", 0);
+                animator.SetFloat("IdleZ", -1);
 
             }
             else if (angle < 145 && designKarakter.localEulerAngles.y < 180)
             {
                 //print("Kiri");
-                animator.SetFloat("X", -1);
-                animator.SetFloat("Z", 0);
+                animator.SetFloat("IdleX", -1);
+                animator.SetFloat("IdleZ", 0);
             }
             else if (angle < 145 && designKarakter.localEulerAngles.y > 180)
             {
                 //print("Kanan");
-                animator.SetFloat("X", 1);
-                animator.SetFloat("Z", 0);
+                animator.SetFloat("IdleX", 1);
+                animator.SetFloat("IdleZ", 0);
             }
             else if (angle < 180)
             {
                 //print("Depan");
-                animator.SetFloat("X", 0);
-                animator.SetFloat("Z", 1);
+                animator.SetFloat("IdleX", 0);
+                animator.SetFloat("IdleZ", 1);
+            }
+            else
+            {
+                //print("Depan");
+                animator.SetFloat("IdleX", 0);
+                animator.SetFloat("IdleZ", 1);
             }
             
         }
