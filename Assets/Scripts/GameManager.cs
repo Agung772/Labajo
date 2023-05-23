@@ -27,10 +27,6 @@ public class GameManager : MonoBehaviour
         print(Display.main.renderingHeight + " x " + Display.main.renderingWidth);
     }
 
-    private void Update()
-    {
-
-    }
 
     public void Transisi(string condition)
     {
