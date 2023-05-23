@@ -30,6 +30,7 @@ public class GameManager : MonoBehaviour
 
     public void Transisi(string condition)
     {
+        transisi.gameObject.SetActive(true);
         if (condition == "Start")
         {
             transisi.SetTrigger("Start");
