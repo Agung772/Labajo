@@ -15,11 +15,14 @@ public class UIManager : MonoBehaviour
         StartCoroutine(Coroutine());
         IEnumerator Coroutine()
         {
-            loadingUI.SetActive(true);
             loadingBar.fillAmount = 0;
             loadingText.text = 0 + "%";
 
             GameManager.instance.Transisi("Start");
+
+            yield return new WaitForSeconds(1);
+            loadingUI.SetActive(true);
+            loadingUI.GetComponent<Animator>().SetTrigger("Start");
             yield return new WaitForSeconds(1);
 
             var loadScene = SceneManager.LoadSceneAsync(sceneName);
@@ -34,8 +37,11 @@ public class UIManager : MonoBehaviour
                 {
                     yield return new WaitForSeconds(1);
                     loadScene.allowSceneActivation = true;
+                    loadingUI.GetComponent<Animator>().SetTrigger("Exit");
+
                     yield return new WaitForSeconds(1);
-                    GameManager.instance.Transisi("Start");
+                    loadingUI.SetActive(false);
+                    GameManager.instance.Transisi("Exit");
                 }
             }
 
