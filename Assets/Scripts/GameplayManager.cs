@@ -17,6 +17,8 @@ public class GameplayManager : MonoBehaviour
     [SerializeField]
     Light matahari;
     public float kecerahanMatahari;
+
+    public GameObject textSampah;
     private void Awake()
     {
         instance = this;
