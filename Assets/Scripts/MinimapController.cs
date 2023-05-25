@@ -18,9 +18,9 @@ public class MinimapController : MonoBehaviour
         }
 
 
-        positionZ += Input.GetAxis("Mouse ScrollWheel") * 100;
-        minimapCam.localPosition = new Vector3(0, 300, positionZ);
-        positionZ = Mathf.Clamp(positionZ, -80 + 10, 1565 - 10);
+        positionZ += Input.GetAxis("Mouse ScrollWheel") * 200;
+        minimapCam.localPosition = new Vector3(minimapCam.position.x, 300, positionZ);
+        positionZ = Mathf.Clamp(positionZ, -80 + 10, 1343.75f - 10);
 
 
     }

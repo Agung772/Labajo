@@ -19,6 +19,9 @@ public class GameplayManager : MonoBehaviour
     public float kecerahanMatahari;
 
     public GameObject textSampah;
+
+    public GameSetting gameSetting;
+
     private void Awake()
     {
         instance = this;
@@ -29,7 +32,7 @@ public class GameplayManager : MonoBehaviour
     private void Start()
     {
         CursorVisible(false);
-
+        gameSetting.LoadGameSetting();
 
     }
 

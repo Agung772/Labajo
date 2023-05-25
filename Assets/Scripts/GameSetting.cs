@@ -1,6 +1,8 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Reflection;
 using UnityEngine;
+using UnityEngine.Rendering.Universal;
 using UnityEngine.UI;
 
 public class GameSetting : MonoBehaviour
@@ -51,6 +53,10 @@ public class GameSetting : MonoBehaviour
     [SerializeField]
     Toggle bayanganToggle;
 
+    public UniversalRenderPipelineAsset URPSetting;
+
+    public FieldInfo lwrpaShadowField = null;
+
     private void Awake()
     {
         instance = this;
@@ -60,7 +66,7 @@ public class GameSetting : MonoBehaviour
         LoadGameSetting();
     }
 
-    void LoadGameSetting()
+    public void LoadGameSetting()
     {
         grafikGameDD.value = (int)GameSave.instance.grafik;
         QualitySettings.SetQualityLevel(grafikGameDD.value);
@@ -93,6 +99,8 @@ public class GameSetting : MonoBehaviour
             GameplayManager.instance.SetKecerahanMatahari(kecerahanMatahariSlider.value * 10);
 
             GameplayManager.instance.SetFieldOfView(fieldOfViewSlider.value * 100);
+
+
         }
     }
 
@@ -186,10 +194,14 @@ public class GameSetting : MonoBehaviour
         if (value)
         {
             GameSave.instance.SaveSetting(GameSave.instance._Bayangan, 1);
+            lwrpaShadowField = URPSetting.GetType().GetField("m_MainLightShadowsSupported", BindingFlags.NonPublic | BindingFlags.Instance);
+            lwrpaShadowField.SetValue(URPSetting, true);
         }
         else
         {
             GameSave.instance.SaveSetting(GameSave.instance._Bayangan, 0);
+            lwrpaShadowField = URPSetting.GetType().GetField("m_MainLightShadowsSupported", BindingFlags.NonPublic | BindingFlags.Instance);
+            lwrpaShadowField.SetValue(URPSetting, false);
         }
 
     }
