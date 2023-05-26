@@ -9,10 +9,11 @@ public class Npc : MonoBehaviour
 
     Vector3 animasiV3;
 
-    private void Start()
+    IEnumerator Start()
     {
         cam = GameObject.FindGameObjectWithTag("MainCamera").transform;
-
+        yield return new WaitForSeconds(2);
+        Destroy(GetComponent<Rigidbody>());
     }
 
     private void Update()
@@ -21,7 +22,9 @@ public class Npc : MonoBehaviour
 
 
         animasiV3 = transform.position - cam.position;
-        animator.SetFloat("X", animasiV3.x);
-        animator.SetFloat("Z", animasiV3.z);
+        Vector3 v3 = animasiV3.normalized;
+
+        animator.SetFloat("X", v3.x);
+        animator.SetFloat("Z", v3.z);
     }
 }
