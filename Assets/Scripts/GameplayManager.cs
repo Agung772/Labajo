@@ -50,6 +50,21 @@ public class GameplayManager : MonoBehaviour
         {
             UIGameplay.instance.MapUI();
         }
+
+        if (Input.GetKeyDown(KeyCode.Equals))
+        {
+
+            Time.timeScale += 0.1f;
+            print(Time.timeScale);
+        }
+        if (Input.GetKeyDown(KeyCode.Minus))
+        {
+            if (Time.timeScale > 0)
+            {
+                Time.timeScale -= 0.1f;
+            }
+            print(Time.timeScale);
+        }
     }
 
     bool cursorPlayerAuto;

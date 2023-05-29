@@ -8,9 +8,8 @@ using UnityEngine.UI;
 public class GameSetting : MonoBehaviour
 {
     public static GameSetting instance;
-
     [SerializeField]
-    Dropdown grafikGameDD;
+    Dropdown sizeScreenDD;
 
     [Space]
     [SerializeField]
@@ -68,10 +67,6 @@ public class GameSetting : MonoBehaviour
 
     public void LoadGameSetting()
     {
-        grafikGameDD.value = (int)GameSave.instance.grafik;
-        QualitySettings.SetQualityLevel(grafikGameDD.value);
-        print((int)GameSave.instance.grafik);
-
         volumeBGMSlider.value = AudioManager.instance.volumeBGM;
         volumeBGMText.text = (volumeBGMSlider.value * 100).ToString("F1") + "%";
         volumeSFXSlider.value = AudioManager.instance.volumeSFX;
@@ -203,6 +198,11 @@ public class GameSetting : MonoBehaviour
             lwrpaShadowField = URPSetting.GetType().GetField("m_MainLightShadowsSupported", BindingFlags.NonPublic | BindingFlags.Instance);
             lwrpaShadowField.SetValue(URPSetting, false);
         }
+
+    }
+
+    public void SetSizeScreen()
+    {
 
     }
 }

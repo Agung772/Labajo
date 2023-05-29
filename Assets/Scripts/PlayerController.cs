@@ -37,18 +37,20 @@ public class PlayerController : MonoBehaviour
 
     void Update()
     {
-        if (operation)
-        {
-            MovePlayer();
-            AnimasiPlayer();
-        }
-
+        MovePlayer();
+        AnimasiPlayer();
     }
 
     void MovePlayer()
     {
-        float horizontal = Input.GetAxisRaw("Horizontal");
-        float vertical = Input.GetAxisRaw("Vertical");
+        float horizontal = 0;
+        float vertical = 0;
+        if (operation)
+        {
+            horizontal = Input.GetAxisRaw("Horizontal");
+            vertical = Input.GetAxisRaw("Vertical");
+        }
+
 
         Vector3 direction = new Vector3(horizontal, 0, vertical).normalized;
 
@@ -67,7 +69,7 @@ public class PlayerController : MonoBehaviour
         //Rotasi ngikutin camera
         designKarakter.rotation = Quaternion.Euler(0, camera.eulerAngles.y, 0);
 
-        if (Input.GetKey(KeyCode.Space))
+        if (Input.GetKey(KeyCode.Space) && operation)
         {
             directionY = jumpForce;
         }
@@ -100,7 +102,7 @@ public class PlayerController : MonoBehaviour
 
 
 
-        if (moveAnimasi > 0)
+        if (moveAnimasi > 0 && operation)
         {
             animator.SetBool("Idle", false);
             animator.SetFloat("X", horizontal);
@@ -116,8 +118,6 @@ public class PlayerController : MonoBehaviour
 
             animator.SetFloat("X", 0);
             animator.SetFloat("Z", 0);
-
-
 
             if (angle < 35f)
             {
@@ -151,6 +151,46 @@ public class PlayerController : MonoBehaviour
                 animator.SetFloat("IdleZ", 1);
             }
             
+        }
+
+        if (moveAnimasi > 0)
+        {
+            animator.SetFloat("JumpX", horizontal);
+            animator.SetFloat("JumpZ", vertical);
+        }
+        else
+        {
+            if (angle < 35f)
+            {
+                //print("Belakang");
+                animator.SetFloat("JumpX", 0);
+                animator.SetFloat("JumpZ", -1);
+
+            }
+            else if (angle < 145 && designKarakter.localEulerAngles.y < 180)
+            {
+                //print("Kiri");
+                animator.SetFloat("JumpX", -1);
+                animator.SetFloat("JumpZ", 0);
+            }
+            else if (angle < 145 && designKarakter.localEulerAngles.y > 180)
+            {
+                //print("Kanan");
+                animator.SetFloat("JumpX", 1);
+                animator.SetFloat("JumpZ", 0);
+            }
+            else if (angle < 180)
+            {
+                //print("Depan");
+                animator.SetFloat("JumpX", 0);
+                animator.SetFloat("JumpZ", 1);
+            }
+            else
+            {
+                //print("Depan");
+                animator.SetFloat("JumpX", 0);
+                animator.SetFloat("JumpZ", 1);
+            }
         }
 
     }

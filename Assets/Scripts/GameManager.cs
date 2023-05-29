@@ -10,6 +10,17 @@ public class GameManager : MonoBehaviour
 
     [SerializeField]
     Animator transisi;
+
+    public Font font;
+    public bool bla;
+    private void OnValidate()
+    {
+        Text[] text = FindObjectsOfType<Text>();
+        for (int i = 0; i < text.Length; i++)
+        {
+            text[i].font = font;
+        }
+    }
     private void Awake()
     {
         Application.targetFrameRate = 60;

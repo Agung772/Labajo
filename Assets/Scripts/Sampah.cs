@@ -18,6 +18,7 @@ public class Sampah : MonoBehaviour
         GameObject temp = Instantiate(GameplayManager.instance.textSampah, transform);
         temp.transform.parent = transform.parent;
         temp.transform.eulerAngles = Vector3.zero;
+        temp.transform.position += new Vector3(0, 1, 0);
         temp.GetComponent<TextSampah>().text.text = "+ Rp." + harga;
         Destroy(gameObject);
     }
