@@ -258,7 +258,8 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 1065312840269289132}
   m_Father: {fileID: 697851641913029507}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -280,6 +281,7 @@ MonoBehaviour:
   kecerahanMatahari: 0
   fieldOfView: 0
   bayangan: 0
+  dataQuest: {fileID: 2295746640096234215}
   _Default: Default
   _PosisiPlayerX: PosisiPlayerX
   _PosisiPlayerY: PosisiPlayerY
@@ -864,6 +866,58 @@ MonoBehaviour:
   m_hasFontAssetChanged: 0
   m_baseMaterial: {fileID: 0}
   m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!1 &4838855687079414621
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1065312840269289132}
+  - component: {fileID: 2295746640096234215}
+  m_Layer: 0
+  m_Name: DataQuest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1065312840269289132
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4838855687079414621}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 697851640790337051}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2295746640096234215
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4838855687079414621}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 11923a7ee2920564c9d1330d29d2ae5e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  titleQuest:
+  - 
+  - Pergi ke kota dan mencari pekerjaan
+  - Membawa peneliti ke daerah perairan
+  - Membantu peneliti melakukan kegiatan penelitian
+  - Membawa peneliti ke area pabrik
+  - Membantu peneliti di dalam pabrik
+  questIndex: []
 --- !u!1 &5240428186249704873
 GameObject:
   m_ObjectHideFlags: 0

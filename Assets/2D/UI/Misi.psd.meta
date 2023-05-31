@@ -68,7 +68,7 @@ TextureImporter:
   - serializedVersion: 3
     buildTarget: DefaultTexturePlatform
     maxTextureSize: 2048
-    resizeAlgorithm: 0
+    resizeAlgorithm: 1
     textureFormat: -1
     textureCompression: 1
     compressionQuality: 50
@@ -129,13 +129,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: UangUI_0
+      name: Misi_0
       rect:
         serializedVersion: 2
-        x: 50
-        y: 662
-        width: 724
-        height: 105
+        x: 37
+        y: 785
+        width: 896
+        height: 190
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -143,8 +143,71 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: abc312d638ddb1149802b97e608c13e5
-      internalID: 184152738
+      spriteID: 5a64320ce6173da43838d86ef58b5c35
+      internalID: 1132543263
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misi_1
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 561
+        width: 892
+        height: 137
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 80e3fd5e364e1884d9f2e6eae60ac5e9
+      internalID: 1760887300
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misi_2
+      rect:
+        serializedVersion: 2
+        x: 54
+        y: 456
+        width: 66
+        height: 84
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 09bfa59fa0bfc004eba013c56a75ae6d
+      internalID: -1833572966
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misi_3
+      rect:
+        serializedVersion: 2
+        x: 167
+        y: 456
+        width: 92
+        height: 88
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7322e6189e7e1f946bf4ee48daa5517c
+      internalID: 1609084849
       vertices: []
       indices: 
       edges: []
@@ -160,7 +223,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      UangUI_0: 184152738
+      Misi_0: 1132543263
+      Misi_1: 1760887300
+      Misi_2: -1833572966
+      Misi_3: 1609084849
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

@@ -18,6 +18,8 @@ public class GameSave : MonoBehaviour
     public float fieldOfView;
     public float bayangan;
 
+    public DataQuest dataQuest;
+
     //Anti typo -------------------------------------
     [HideInInspector]
     public string _Default = "Default";
@@ -107,5 +109,16 @@ public class GameSave : MonoBehaviour
             PlayerPrefs.SetFloat(_Bayangan, value);
             bayangan = value;
         }
+    }
+
+    public void DeleteData()
+    {
+        PlayerPrefs.DeleteKey(_PosisiPlayerX);
+        PlayerPrefs.DeleteKey(_PosisiPlayerY);
+        PlayerPrefs.DeleteKey(_PosisiPlayerZ);
+
+        dataQuest.DeleteData();
+
+
     }
 }

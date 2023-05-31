@@ -48,7 +48,13 @@ public class GameManager : MonoBehaviour
 
         print(Display.main.renderingHeight + " x " + Display.main.renderingWidth);
     }
-
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Delete))
+        {
+            GameSave.instance.DeleteData();
+        }
+    }
 
     public void Transisi(string condition)
     {
@@ -60,10 +66,22 @@ public class GameManager : MonoBehaviour
         else if (condition == "Exit")
         {
             transisi.SetTrigger("Exit");
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                yield return new WaitForSeconds(1);
+                transisi.gameObject.SetActive(false);
+            }
         }        
         else if (condition == "StartExit")
         {
             transisi.SetTrigger("StartExit");
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                yield return new WaitForSeconds(2);
+                transisi.gameObject.SetActive(false);
+            }
         }
     }
 

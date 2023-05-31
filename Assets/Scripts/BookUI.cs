@@ -19,6 +19,7 @@ public class BookUI : MonoBehaviour
 
     [SerializeField]
     GameObject questUI;
+    public QuestUI m_QuestUI;
 
     [Space]
 
@@ -46,17 +47,22 @@ public class BookUI : MonoBehaviour
     public ItemUI itemUISC;
     public MapUI mapUISC;
 
+    [Space]
+    [SerializeField] Image coverBG;
+
+    [Space]
+    public Sprite cover;
+    public Sprite paper;
+
     private void Awake()
     {
         instance = this;
     }
-    private void Start()
-    {
-        ClickButton("");
-    }
     
     public void StartBookUI()
     {
+        setCover = false;
+
         FalseUI();
         coverUI.SetActive(true);
         GameplayManager.instance.CursorVisible(true);
@@ -122,6 +128,7 @@ public class BookUI : MonoBehaviour
 
     float posXButton, widthButton;
     bool saveButton;
+    bool setCover;
     public void ClickButton(string namaButton)
     {
         if (!saveButton)
@@ -129,6 +136,15 @@ public class BookUI : MonoBehaviour
             saveButton = true;
             posXButton = itemButton.anchoredPosition.x;
             widthButton = itemButton.sizeDelta.x;
+        }
+        if (!setCover)
+        {
+            setCover = true;
+            coverBG.sprite = cover;
+        }
+        else
+        {
+            coverBG.sprite = paper;
         }
 
 
@@ -166,5 +182,17 @@ public class BookUI : MonoBehaviour
         {
             //null
         }
+
+        
+    }
+
+    public void Mainmenu()
+    {
+        GameManager.instance.GetComponent<UIManager>().PindahScene("Mainmenu");
+    }
+
+    public void Quitgame()
+    {
+        Application.Quit();
     }
 }
