@@ -11,7 +11,7 @@ public class ScreenStory : MonoBehaviour
     int index;
     [SerializeField] Animator animator;
 
-    [HideInInspector] public GameObject manager;
+    [HideInInspector] public ScreenStoryManager manager;
 
     bool isUse;
 
@@ -35,9 +35,8 @@ public class ScreenStory : MonoBehaviour
                 isUse = true;
                 animator.SetTrigger("Exit");
                 yield return new WaitForSeconds(2);
-                PlayerController.instance.operation = true;
                 Destroy(gameObject);
-                Destroy(manager);
+                manager.Exit();
             }
         }
         else

@@ -14,10 +14,7 @@ public class DataQuest : MonoBehaviour
         questIndex = new float[titleQuest.Length];
         for (int i = 0; i < questIndex.Length; i++)
         {
-            if (i != 0)
-            {
-                questIndex[i] = PlayerPrefs.GetFloat(_questIndex + i);
-            }
+            questIndex[i] = PlayerPrefs.GetFloat(_questIndex + i);
         }
     }
 

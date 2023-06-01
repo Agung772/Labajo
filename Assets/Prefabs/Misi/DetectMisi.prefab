@@ -175,7 +175,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 5660686544374344407, guid: 80882539ddb27c646927f397e9f971a4, type: 2}
+  - {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -219,8 +219,8 @@ MonoBehaviour:
       m_Calls: []
   m_text: Misi
   m_isRightToLeft: 0
-  m_fontAsset: {fileID: 11400000, guid: 80882539ddb27c646927f397e9f971a4, type: 2}
-  m_sharedMaterial: {fileID: 5660686544374344407, guid: 80882539ddb27c646927f397e9f971a4, type: 2}
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_fontSharedMaterials: []
   m_fontMaterial: {fileID: 0}
   m_fontMaterials: []
@@ -376,7 +376,6 @@ GameObject:
   - component: {fileID: 4649609847883289245}
   - component: {fileID: 9093628854887368207}
   - component: {fileID: 2009171409199862299}
-  - component: {fileID: 870814343286522683}
   m_Layer: 0
   m_Name: 3D
   m_TagString: Untagged
@@ -449,17 +448,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &870814343286522683
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8818999804696668210}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  m_Radius: 0.5000001
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0.000000059604645, y: 0, z: -0.000030606985}

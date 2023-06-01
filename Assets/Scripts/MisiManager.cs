@@ -15,30 +15,48 @@ public class MisiManager : MonoBehaviour
         StartData();
         LoadData();
 
+
+        var dataQuest = GameSave.instance.dataQuest;
+        //Set opening
+        if (dataQuest.questIndex[0] == 0)
+        {
+            dataQuest.SaveData(0, 2);
+        }
+        //Load misi
+        for (int i = 0; i < dataQuest.titleQuest.Length; i++)
+        {
+            if (dataQuest.questIndex[i] == 1)
+            {
+                StartMisi(i + ", 1");
+                break;
+            }
+
+        }
+
         for (int i = 0; i < quest.Length; i++)
         {
-            GameSave.instance.dataQuest.SaveData(i, 1);
+            //GameSave.instance.dataQuest.SaveData(i, 1);
         }
     }
 
     void StartData()
     {
-        detectMisi = new GameObject[transform.GetChild(0).childCount];
-        for (int i = 0; i < transform.GetChild(0).childCount; i++)
+        detectMisi = new GameObject[transform.GetChild(0).childCount + 1];
+        for (int i = 0; i < detectMisi.Length; i++)
         {
-            detectMisi[i] = transform.GetChild(0).GetChild(i).gameObject;
+            if (i != 0) detectMisi[i] = transform.GetChild(0).GetChild(i - 1).gameObject;
         }
 
-        dialogManager = new GameObject[transform.GetChild(1).childCount];
-        for (int i = 0; i < transform.GetChild(1).childCount; i++)
+        dialogManager = new GameObject[transform.GetChild(1).childCount + 1];
+        for (int i = 0; i < dialogManager.Length; i++)
         {
-            dialogManager[i] = transform.GetChild(1).GetChild(i).gameObject;
+            if (i != 0) dialogManager[i] = transform.GetChild(1).GetChild(i - 1).gameObject;
         }
 
-        screenStoryManager = new GameObject[transform.GetChild(2).childCount];
-        for (int i = 0; i < transform.GetChild(2).childCount; i++)
+        screenStoryManager = new GameObject[transform.GetChild(2).childCount + 1];
+        for (int i = 0; i < screenStoryManager.Length; i++)
         {
-            screenStoryManager[i] = transform.GetChild(2).GetChild(i).gameObject;
+            if (i != 0) screenStoryManager[i] = transform.GetChild(2).GetChild(i - 1).gameObject;
         }
 
         var dataQuest = GameSave.instance.dataQuest;
@@ -90,11 +108,80 @@ public class MisiManager : MonoBehaviour
                 }
             }
         }
+       
     }
 
-    public void Misi1()
+    public void StartMisi(string index)
     {
-        print("Kedetek");
+        var dataQuest = GameSave.instance.dataQuest;
+        if (index == "0, 1")
+        {
+            screenStoryManager[1].SetActive(true);
+        }
+        else if (index == "1, 1")
+        {
+            dataQuest.SaveData(1, 1);
+            dialogManager[1].SetActive(true);
+        }
+        else if (index == "1, 2")
+        {
+            detectMisi[1].SetActive(true);
+        }
+        else if (index == "1, 3")
+        {
+            screenStoryManager[2].SetActive(true);
+        }
+        else if (index == "1, 4")
+        {
+            dataQuest.SaveData(1, 2);
+            dialogManager[2].SetActive(true);
+        }
+        else if (index == "2, 1")
+        {
+            dataQuest.SaveData(2, 1);
+            detectMisi[2].SetActive(true);
+        }
+        else if (index == "2, 2")
+        {
+            screenStoryManager[3].SetActive(true);
+        }
+        else if (index == "2, 3")
+        {
+            dataQuest.SaveData(2, 2);
+            dialogManager[3].SetActive(true);
+        }
+        else if (index == "3, 1")
+        {
+            dataQuest.SaveData(3, 1);
+            detectMisi[3].SetActive(true);
+        }
+        else if (index == "3, 2")
+        {
+            screenStoryManager[4].SetActive(true);
+        }
+        else if (index == "3, 3")
+        {
+            screenStoryManager[4].SetActive(true);
+        }
+
+        LoadData();
+    }
+    public void ExitMisi(int index)
+    {
+        var dataQuest = GameSave.instance.dataQuest;
+        if (index == 0)
+        {
+            dataQuest.SaveData(0, 1);
+        }
+        else if (index == 1)
+        {
+            dataQuest.SaveData(1, 2);
+        }
+        else if (index == 2)
+        {
+            dataQuest.SaveData(2, 2);
+        }
+        LoadData();
     }
 
 

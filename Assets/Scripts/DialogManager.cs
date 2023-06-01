@@ -1,7 +1,8 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using System;
+using UnityEngine.Events;
 
 public class DialogManager : MonoBehaviour
 {
@@ -19,6 +20,8 @@ public class DialogManager : MonoBehaviour
     int dialogIndex;
 
     bool isUse;
+
+    public UnityEvent ExitTrigger;
     private void Start()
     {
         StartDialogBox();
@@ -51,7 +54,9 @@ public class DialogManager : MonoBehaviour
                 yield return new WaitForSeconds(0.5f);
                 Destroy(gameObject);
                 PlayerController.instance.operation = true;
+                ExitTrigger.Invoke();
             }
+
 
         }
         else
