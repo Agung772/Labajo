@@ -32,7 +32,7 @@ public class ScreenStory : MonoBehaviour
             IEnumerator Coroutine()
             {
                 animator.SetTrigger("Exit");
-                yield return new WaitForSeconds(1);
+                yield return new WaitForSeconds(2);
                 Destroy(gameObject);
             }
         }
