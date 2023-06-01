@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: df16e1a00d5645b4ab9cd85453273810
+guid: 8e70292a120a1e149a8e90985eae8dae
 TrueTypeFontImporter:
   externalObjects: {}
   serializedVersion: 4
@@ -9,7 +9,7 @@ TrueTypeFontImporter:
   characterPadding: 1
   includeFontData: 1
   fontNames:
-  - FREEDOM
+  - ZhengmingLishu
   fallbackFontReferences: []
   customCharacters: 
   fontRenderingMode: 0

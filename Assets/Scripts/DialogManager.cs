@@ -18,6 +18,7 @@ public class DialogManager : MonoBehaviour
     public GameObject dialogBox;
     int dialogIndex;
 
+    bool isUse;
     private void Start()
     {
         StartDialogBox();
@@ -34,6 +35,8 @@ public class DialogManager : MonoBehaviour
 
     void StartDialogBox()
     {
+        if (isUse) return;
+
         if (transform.childCount != 0)
         {
             Destroy(transform.GetChild(0).gameObject);
@@ -44,7 +47,8 @@ public class DialogManager : MonoBehaviour
             StartCoroutine(Coroutine());
             IEnumerator Coroutine()
             {
-                yield return new WaitForSeconds(1);
+                isUse = true;
+                yield return new WaitForSeconds(0.5f);
                 Destroy(gameObject);
                 PlayerController.instance.operation = true;
             }
