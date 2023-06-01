@@ -25,7 +25,7 @@ public class MisiManager : MonoBehaviour
         quest = new Quest[dataQuest.titleQuest.Length];
 
         //Clear child
-        QuestUI questUI = BookUI.instance.m_QuestUI;
+        QuestUI questUI = UIGameplay.instance.bookUI.GetComponent<BookUI>().m_QuestUI;
         int childContent = questUI.content.childCount;
         for (int i = 0; i < childContent; i++)
         {

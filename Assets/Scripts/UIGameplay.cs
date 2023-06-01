@@ -6,7 +6,7 @@ public class UIGameplay : MonoBehaviour
 {
     public static UIGameplay instance;
 
-    [SerializeField]
+    public
     GameObject bookUI;
     private void Awake()
     {

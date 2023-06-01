@@ -5,17 +5,20 @@ using UnityEngine;
 public class Pabrik : MonoBehaviour
 {
     public bool active;
-    public GameObject particle;
+    public GameObject particleAsep;
+    public GameObject particleLimbah;
 
     public void Operation(bool value)
     {
         if (value)
         {
-            particle.SetActive(true);
+            particleAsep.SetActive(true);
+            particleLimbah.SetActive(true);
         }
         else
         {
-            particle.SetActive(false);
+            particleAsep.SetActive(false);
+            particleLimbah.SetActive(false);
         }
     }
 }
