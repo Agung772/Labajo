@@ -3830,6 +3830,100 @@ Transform:
   m_Father: {fileID: 1224820861}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1001 &140572512
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2073239365}
+    m_Modifications:
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_Name
+      value: ScreenStoryManager (5)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[0]
+      value: Setelah dipastikan akibat dari pencemaran lingkungan karena aktifitas
+        pabrik tersebut, akhirnya masyarakat dan seluruh pejabat kota memutuskan
+        untuk menutup pabrik tersebut untuk selamanya.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[1]
+      value: Setelah pabrik ditutup elang membantu peneliti lingkungan melakukan
+        sosialisasi kepada masyarakat betapa pentingnya untuk menjaga lingkungan
+        tempat kita tinggal.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[2]
+      value: Kepala peneliti bertemu dengan elang dan bertanya...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[4]
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+--- !u!4 &140572513 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+  m_PrefabInstance: {fileID: 140572512}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &142974371
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14288,6 +14382,99 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 3852832371178954815, guid: e6c3c49302979e2418d75c8296c0b380, type: 3}
   m_PrefabInstance: {fileID: 343425309}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &343942038
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2073239365}
+    m_Modifications:
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_Name
+      value: ScreenStoryManager (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[0]
+      value: Sesampainya di kota elang terkejut dengan kondisi kota yang kotor, sampah
+        berserakan, bahkan areal perairan juga tercemar kondisi yang sangat berbeda
+        dengan keadaan di desa.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[1]
+      value: Peneliti lingkungan datang ke lokasi untuk mengetahui penyebab pencemaran
+        tersebut.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[2]
+      value: Kepala peneliti bertemu dengan elang dan bertanya...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[4]
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+--- !u!4 &343942039 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+  m_PrefabInstance: {fileID: 343942038}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &345880370 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 36081442355337771, guid: 2f9fd20aca6c41842bf1224c02d7ced6, type: 3}
@@ -22868,6 +23055,97 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 3852832371178954815, guid: e6c3c49302979e2418d75c8296c0b380, type: 3}
   m_PrefabInstance: {fileID: 685912677}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &688925918
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2073239365}
+    m_Modifications:
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_Name
+      value: ScreenStoryManager (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[0]
+      value: Setelah melakukan penelitian tentang perairan yg tercemar.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[1]
+      value: Peneliti menyimpulkan pencemaran tersebut disebabkan oleh limbah yg
+        dibuang sembarangan ke daerah perairan.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[2]
+      value: Kepala peneliti bertemu dengan elang dan bertanya...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[4]
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+--- !u!4 &688925919 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+  m_PrefabInstance: {fileID: 688925918}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &691153952
 GameObject:
@@ -32728,6 +33006,105 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 1185121580957513124, guid: 0541d117cd289e84ab155809698d0a84, type: 3}
   m_PrefabInstance: {fileID: 1074115794}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1076060043
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1620397077}
+    m_Modifications:
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367220091986562127, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_Name
+      value: DialogManager (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367220091986562127, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[0].isiDialog
+      value: Nak apakah di sekitar sini ada pabrik yang masih beroperasi?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[1].isiDialog
+      value: Iya pak, di sekitar sini ada satu pabrik yang sudah lama beroperasi.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[2].isiDialog
+      value: Sekarang kami tau penyebab masyarakat banyak yg sakit karena menggunakan
+        air ini untuk kebutuhan sehari hari. bisa kamu antarkan saya ke pabrik tersebut?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[3].isiDialog
+      value: Mari ikut dengan saya pak.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[0].namaDialog
+      value: 'Peneliti '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[1].namaDialog
+      value: 'Elang '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[2].namaDialog
+      value: 'Peneliti '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[3].namaDialog
+      value: 'Elang '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+--- !u!4 &1076060044 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+  m_PrefabInstance: {fileID: 1076060043}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1080085078
 GameObject:
@@ -54952,6 +55329,105 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 3070740999328271994, guid: cf5a3962084314c459175ae9c3f0f192, type: 3}
   m_PrefabInstance: {fileID: 79295017}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1368812116
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 1620397077}
+    m_Modifications:
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367220091986562127, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_Name
+      value: DialogManager (2)
+      objectReference: {fileID: 0}
+    - target: {fileID: 5367220091986562127, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[0].isiDialog
+      value: Hai nak, kami peneliti lingkungan, bisakah kamu membantu kami.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[1].isiDialog
+      value: Tentu saja pak, apa yang bisa saya bantu?
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[2].isiDialog
+      value: Tolong antarkan kami ke daerah perairan di sekitar sini yang menjadi
+        sumber air utama masyarakat.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[3].isiDialog
+      value: Mari ikut dengan saya pak...
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[0].namaDialog
+      value: 'Peneliti '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[1].namaDialog
+      value: 'Elang '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[2].namaDialog
+      value: 'Peneliti '
+      objectReference: {fileID: 0}
+    - target: {fileID: 8421634858698101288, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+      propertyPath: dialogList.Array.data[3].namaDialog
+      value: 'Elang '
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+--- !u!4 &1368812117 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 332811740995226693, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
+  m_PrefabInstance: {fileID: 1368812116}
+  m_PrefabAsset: {fileID: 0}
 --- !u!4 &1368974522 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 36081442355337771, guid: 2f9fd20aca6c41842bf1224c02d7ced6, type: 3}
@@ -61327,6 +61803,8 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 319639598}
+  - {fileID: 1368812117}
+  - {fileID: 1076060044}
   m_Father: {fileID: 2027833700}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -64609,6 +65087,99 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1748771526}
   m_Mesh: {fileID: -7469079695732547297, guid: 6ba867e5a5a6d5842a2fab17ad8a4ae0, type: 3}
+--- !u!1001 &1751000093
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 2073239365}
+    m_Modifications:
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_Name
+      value: ScreenStoryManager (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[0]
+      value: Di areal pabrik tidak di izinkan orang luar memasuki areal tanpa seizin
+        penjaga pabrik.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[1]
+      value: Kemudian peneliti meminta bantuan kepada pihak kepolisian untuk membantu
+        mereka masuk ke areal pabrik dan melakukan penelitian untuk mencari tahu
+        penyebab pencemaran air.
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[2]
+      value: Kepala peneliti bertemu dengan elang dan bertanya...
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[3]
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+      propertyPath: textStory.Array.data[4]
+      value: 4
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+--- !u!4 &1751000094 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
+  m_PrefabInstance: {fileID: 1751000093}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1755064058
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -71780,6 +72351,10 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1604039476}
+  - {fileID: 343942039}
+  - {fileID: 688925919}
+  - {fileID: 1751000094}
+  - {fileID: 140572513}
   m_Father: {fileID: 2027833700}
   m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -75998,7 +76573,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3383789901480811763, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3383789901480811764, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
       propertyPath: m_RootOrder
@@ -76046,11 +76621,12 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
       propertyPath: textStory.Array.size
-      value: 5
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
       propertyPath: textStory.Array.data[0]
-      value: 0
+      value: Menceritakan seorang remaja lokal bernama elang yang berusia 15 tahun
+        dan hidup berdua dengan ibunya.
       objectReference: {fileID: 0}
     - target: {fileID: 3383789901480811765, guid: 527ada7c89b83c44aab5b361f736d0d7, type: 3}
       propertyPath: textStory.Array.data[1]
