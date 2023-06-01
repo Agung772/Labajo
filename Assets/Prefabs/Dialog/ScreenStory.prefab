@@ -88,7 +88,7 @@ GameObject:
   - component: {fileID: 2337198981966516632}
   - component: {fileID: 2337198981966516635}
   m_Layer: 0
-  m_Name: ScreenStory (1)
+  m_Name: ScreenStory
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

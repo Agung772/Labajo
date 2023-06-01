@@ -37,9 +37,9 @@ public class DialogManager : MonoBehaviour
     {
         if (isUse) return;
 
-        if (transform.childCount != 0)
+        if (UIGameplay.instance.spawnDialogBox.childCount != 0)
         {
-            Destroy(transform.GetChild(0).gameObject);
+            Destroy(UIGameplay.instance.spawnDialogBox.GetChild(0).gameObject);
         }
 
         if (dialogIndex == dialogList.Count)
@@ -56,7 +56,7 @@ public class DialogManager : MonoBehaviour
         }
         else
         {
-            GameObject temp = Instantiate(dialogBox, transform);
+            GameObject temp = Instantiate(dialogBox, UIGameplay.instance.spawnDialogBox);
             temp.GetComponent<DialogBox>().NamaText.text = dialogList[dialogIndex].namaDialog.ToString();
             temp.GetComponent<DialogBox>().isiDialogText.text = dialogList[dialogIndex].isiDialog.ToString();
         }

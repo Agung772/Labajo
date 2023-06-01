@@ -8,6 +8,9 @@ public class UIGameplay : MonoBehaviour
 
     public
     GameObject bookUI;
+
+    public Transform spawnDialogBox;
+    public Transform spawnScreenStory;
     private void Awake()
     {
         instance = this;

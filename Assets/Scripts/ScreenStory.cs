@@ -11,10 +11,9 @@ public class ScreenStory : MonoBehaviour
     int index;
     [SerializeField] Animator animator;
 
-    private void Start()
-    {
-        StartScreenStory();
-    }
+    [HideInInspector] public GameObject manager;
+
+    bool isUse;
 
     private void Update()
     {
@@ -24,16 +23,21 @@ public class ScreenStory : MonoBehaviour
         }
     }
 
-    void StartScreenStory()
+    public void StartScreenStory()
     {
+        if (isUse) return;
+
         if (index == textStory.Length)
         {
             StartCoroutine(Coroutine());
             IEnumerator Coroutine()
             {
+                isUse = true;
                 animator.SetTrigger("Exit");
                 yield return new WaitForSeconds(2);
+                PlayerController.instance.operation = true;
                 Destroy(gameObject);
+                Destroy(manager);
             }
         }
         else
