@@ -8,6 +8,8 @@ public class GameSave : MonoBehaviour
 
     //Value save
     public Vector3 posisiPlayer;
+    public float koin;
+    public float questComplate;
 
 
     //Setting
@@ -22,14 +24,18 @@ public class GameSave : MonoBehaviour
 
     //Anti typo -------------------------------------
     [HideInInspector]
-    public string _Default = "Default";
+    public string _DefaultGame = "DefaultGame";
+    public string _DefaultSetting = "DefaultSetting";
 
     //Player
     [HideInInspector]
     public string
         _PosisiPlayerX = "PosisiPlayerX",
         _PosisiPlayerY = "PosisiPlayerY",
-        _PosisiPlayerZ = "PosisiPlayerZ";
+        _PosisiPlayerZ = "PosisiPlayerZ",
+        
+        _Koin = "Koin",
+        _QuestComplate = "QuestComplate";
 
     //Setting
     [HideInInspector]
@@ -54,15 +60,21 @@ public class GameSave : MonoBehaviour
 
     void DefaultData()
     {
-        if (PlayerPrefs.GetFloat(_Default) == 0)
+        if (PlayerPrefs.GetFloat(_DefaultSetting) == 0)
         {
-            PlayerPrefs.SetFloat(_Default, 1);
+            PlayerPrefs.SetFloat(_DefaultSetting, 1);
 
             SaveSetting(_Grafik, 2);
             SaveSetting(_SensitifMouse, GameSetting.instance.sensitifMouseDefault);
             SaveSetting(_KecerahanMatahari, GameSetting.instance.kecerahanMatahariDefault);
             SaveSetting(_FieldOfView, GameSetting.instance.fieldOfViewDefault);
             SaveSetting(_Bayangan, 1);
+        }
+
+        if (PlayerPrefs.GetFloat(_DefaultGame) == 0)
+        {
+            PlayerPrefs.SetFloat(_DefaultGame, 1);
+            SavePosisiPlayer(90.23f, 5.89f, -203.34f);
         }
 
     }
@@ -74,12 +86,33 @@ public class GameSave : MonoBehaviour
             PlayerPrefs.GetFloat(_PosisiPlayerY),
             PlayerPrefs.GetFloat(_PosisiPlayerZ));
 
+        koin = PlayerPrefs.GetFloat(_Koin);
+        questComplate = PlayerPrefs.GetFloat(_QuestComplate);
+
         //Setting
         grafik = PlayerPrefs.GetFloat(_Grafik);
         sensitifMouse = PlayerPrefs.GetFloat(_SensitifMouse);
         kecerahanMatahari = PlayerPrefs.GetFloat(_KecerahanMatahari);
         fieldOfView = PlayerPrefs.GetFloat(_FieldOfView);
         bayangan = PlayerPrefs.GetFloat(_Bayangan);
+    }
+
+    public void SaveKoin(float value)
+    {
+        PlayerPrefs.SetFloat(_Koin, value);
+        LoadData();
+    }
+    public void SaveQuest(float value)
+    {
+        PlayerPrefs.SetFloat(_QuestComplate, value);
+        LoadData();
+    }
+    public void SavePosisiPlayer(float x, float y, float z)
+    {
+        PlayerPrefs.SetFloat(_PosisiPlayerX, x);
+        PlayerPrefs.SetFloat(_PosisiPlayerY, y);
+        PlayerPrefs.SetFloat(_PosisiPlayerZ, z);
+        LoadData();
     }
 
     public void SaveSetting(string nameSave, float value)
@@ -116,6 +149,11 @@ public class GameSave : MonoBehaviour
         PlayerPrefs.DeleteKey(_PosisiPlayerX);
         PlayerPrefs.DeleteKey(_PosisiPlayerY);
         PlayerPrefs.DeleteKey(_PosisiPlayerZ);
+
+        PlayerPrefs.DeleteKey(_Koin);
+        PlayerPrefs.DeleteKey(_QuestComplate);
+
+        PlayerPrefs.DeleteKey(_DefaultGame);
 
         dataQuest.DeleteData();
 

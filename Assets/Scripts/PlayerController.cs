@@ -35,6 +35,28 @@ public class PlayerController : MonoBehaviour
         speedNormal = speedPlayer;
     }
 
+    IEnumerator Start()
+    {
+        yield return new WaitForSeconds(0.1f);
+        if (operation)
+        {
+            operation = false;
+            yield return new WaitForSeconds(0.1f);
+            transform.position = GameSave.instance.posisiPlayer;
+            yield return new WaitForSeconds(0.1f);
+            operation = true;
+        }
+        else
+        {
+            transform.position = GameSave.instance.posisiPlayer;
+        }
+    }
+
+    private void OnDisable()
+    {
+        GameSave.instance.SavePosisiPlayer(transform.position.x, transform.position.y, transform.position.z);
+    }
+
     void Update()
     {
         MovePlayer();
@@ -72,6 +94,8 @@ public class PlayerController : MonoBehaviour
         if (Input.GetKey(KeyCode.Space) && operation)
         {
             directionY = jumpForce;
+            animator.SetTrigger("Jump");
+            animator.SetBool("Unjump", false);
         }
 
         directionY += gravity * Time.deltaTime;

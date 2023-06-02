@@ -10,9 +10,16 @@ public class QuestComplate : MonoBehaviour
 
     private void Start()
     {
-        IsComplate = false;
+        if (GameSave.instance.questComplate == 0)
+        {
+            IsComplate = false;
+        }
+        else
+        {
+            IsComplate = true;
+        }
     }
-    bool isComplate;
+    public bool isComplate;
     public bool IsComplate
     {
         get { return isComplate; }

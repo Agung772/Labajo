@@ -34,9 +34,10 @@ public class ScreenStory : MonoBehaviour
             {
                 isUse = true;
                 animator.SetTrigger("Exit");
-                yield return new WaitForSeconds(2);
-                Destroy(gameObject);
+                yield return new WaitForSeconds(1);
                 manager.Exit();
+                yield return new WaitForSeconds(1);
+                Destroy(gameObject);
             }
         }
         else

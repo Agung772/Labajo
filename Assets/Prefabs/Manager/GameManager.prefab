@@ -42,7 +42,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 52acef835af64784088f8f3aaa7c8b06, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -276,16 +276,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   posisiPlayer: {x: 0, y: 0, z: 0}
+  koin: 0
+  questComplate: 0
   grafik: 0
   sensitifMouse: 0
   kecerahanMatahari: 0
   fieldOfView: 0
   bayangan: 0
   dataQuest: {fileID: 2295746640096234215}
-  _Default: Default
+  _DefaultGame: DefaultGame
+  _DefaultSetting: DefaultSetting
   _PosisiPlayerX: PosisiPlayerX
   _PosisiPlayerY: PosisiPlayerY
   _PosisiPlayerZ: PosisiPlayerZ
+  _Koin: Koin
+  _QuestComplate: QuestComplate
   _Grafik: Grafik
   _SensitifMouse: SensitifMouse
   _KecerahanMatahari: KecerahanMatahari
@@ -916,6 +921,7 @@ MonoBehaviour:
   - Membawa peneliti ke daerah perairan
   - Membawa peneliti ke area pabrik
   - Membantu peneliti di dalam pabrik
+  - Misi selesai, sekarang keadaan kota sudah membaik
   questIndex: []
 --- !u!1 &5240428186249704873
 GameObject:

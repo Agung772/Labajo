@@ -12,6 +12,7 @@ public class MisiManager : MonoBehaviour
     public GameObject[] detectMisi;
     public GameObject[] dialogManager;
     public GameObject[] screenStoryManager;
+    public GameObject[] npc;
 
     private void Start()
     {
@@ -60,6 +61,12 @@ public class MisiManager : MonoBehaviour
         for (int i = 0; i < screenStoryManager.Length; i++)
         {
             if (i != 0) screenStoryManager[i] = transform.GetChild(2).GetChild(i - 1).gameObject;
+        }
+
+        npc = new GameObject[transform.GetChild(3).childCount + 1];
+        for (int i = 0; i < npc.Length; i++)
+        {
+            if (i != 0) npc[i] = transform.GetChild(3).GetChild(i - 1).gameObject;
         }
 
         var dataQuest = GameSave.instance.dataQuest;
@@ -125,11 +132,19 @@ public class MisiManager : MonoBehaviour
         {
             dataQuest.SaveData(1, 1);
             dialogManager[1].SetActive(true);
+            npc[1].SetActive(true);
         }
         else if (index == "1, 2")
         {
-            detectMisi[1].SetActive(true);
-            SpawnNotifMisi(dataQuest.titleQuest[1]);
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                detectMisi[1].SetActive(true);
+                SpawnNotifMisi(dataQuest.titleQuest[1]);
+                yield return new WaitForSeconds(3);
+                SpawnNotifMisi("Tekan Esc untuk melihat peta dan misi");
+            }
+
         }
         else if (index == "1, 3")
         {
@@ -145,6 +160,8 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(1, 2);
             dataQuest.SaveData(2, 1);
             detectMisi[2].SetActive(true);
+            npc[1].SetActive(false);
+            npc[2].SetActive(true);
             SpawnNotifMisi(dataQuest.titleQuest[2]);
         }
         else if (index == "2, 2")
@@ -160,6 +177,8 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(2, 2);
             dataQuest.SaveData(3, 1);
             detectMisi[3].SetActive(true);
+            npc[2].SetActive(false);
+            npc[3].SetActive(true);
             SpawnNotifMisi(dataQuest.titleQuest[3]);
         }
         else if (index == "3, 2")
@@ -171,6 +190,7 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(3, 2);
             dataQuest.SaveData(4, 1);
             detectMisi[4].SetActive(true);
+            npc[3].SetActive(false);
             SpawnNotifMisi(dataQuest.titleQuest[4]);
         }
         else if (index == "4, 2")
@@ -180,7 +200,18 @@ public class MisiManager : MonoBehaviour
         else if (index == "4, 3")
         {
             dataQuest.SaveData(4, 2);
+            dataQuest.SaveData(5, 2);
+
+            SpawnNotifMisi(dataQuest.titleQuest[5]);
             print("Misi selesai");
+            GameSave.instance.SaveQuest(1);
+            questComplate.IsComplate = true;
+
+            Npc[] npc = FindObjectsOfType<Npc>();
+            for (int i = 0; i < npc.Length; i++)
+            {
+                npc[i].LoadData();
+            }
         }
 
         LoadData();
@@ -207,6 +238,6 @@ public class MisiManager : MonoBehaviour
     {
         GameObject temp = Instantiate(notifMisiPrefab, UIGameplay.instance.spawnDialogBox);
         temp.GetComponent<NotifMisi>().titleText.text = value;
-        Destroy(temp.gameObject, 3.5f);
+        Destroy(temp.gameObject, 4.5f);
     }
 }

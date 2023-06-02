@@ -42,7 +42,7 @@ public class GameplayManager : MonoBehaviour
         SensitivitasCam();
 
 
-        if (Input.GetKeyUp(KeyCode.B))
+        if (Input.GetKeyUp(KeyCode.Escape))
         {
             UIGameplay.instance.BookUI();
         }

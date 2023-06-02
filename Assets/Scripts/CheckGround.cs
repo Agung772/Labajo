@@ -15,7 +15,5 @@ public class CheckGround : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         ground = false;
-        PlayerController.instance.animator.SetTrigger("Jump");
-        PlayerController.instance.animator.SetBool("Unjump", false);
     }
 }

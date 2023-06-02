@@ -53,6 +53,7 @@ MonoBehaviour:
   dialogManagerPrefab: {fileID: 5367220091986562127, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
   animator: {fileID: 5239485607658597341}
   angle: 0
+  cd: 0
 --- !u!136 &5239485606393057751
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -66,7 +67,7 @@ CapsuleCollider:
   m_Radius: 0.5
   m_Height: 4
   m_Direction: 1
-  m_Center: {x: 0, y: 0.95, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
 --- !u!54 &5239485606393057749
 Rigidbody:
   m_ObjectHideFlags: 0
