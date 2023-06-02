@@ -66,5 +66,17 @@ public class DialogManager : MonoBehaviour
             temp.GetComponent<DialogBox>().isiDialogText.text = dialogList[dialogIndex].isiDialog.ToString();
         }
         dialogIndex++;
+
+
+    }
+    public void SetDialog(string nama, string isi)
+    {
+        dialogList.Clear();
+        IsiDialog temp = new IsiDialog
+        {
+            namaDialog = nama,
+            isiDialog = isi
+        };
+        dialogList.Add(temp);
     }
 }

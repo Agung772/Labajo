@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class MisiManager : MonoBehaviour
 {
+    public QuestComplate questComplate;
+    public GameObject notifMisiPrefab;
+
     public Quest[] quest;
 
     public GameObject[] detectMisi;
@@ -20,7 +23,7 @@ public class MisiManager : MonoBehaviour
         //Set opening
         if (dataQuest.questIndex[0] == 0)
         {
-            dataQuest.SaveData(0, 2);
+            dataQuest.SaveData(0, 1);
         }
         //Load misi
         for (int i = 0; i < dataQuest.titleQuest.Length; i++)
@@ -126,6 +129,7 @@ public class MisiManager : MonoBehaviour
         else if (index == "1, 2")
         {
             detectMisi[1].SetActive(true);
+            SpawnNotifMisi(dataQuest.titleQuest[1]);
         }
         else if (index == "1, 3")
         {
@@ -133,13 +137,15 @@ public class MisiManager : MonoBehaviour
         }
         else if (index == "1, 4")
         {
-            dataQuest.SaveData(1, 2);
             dialogManager[2].SetActive(true);
         }
         else if (index == "2, 1")
         {
+            dataQuest.SaveData(0, 2);
+            dataQuest.SaveData(1, 2);
             dataQuest.SaveData(2, 1);
             detectMisi[2].SetActive(true);
+            SpawnNotifMisi(dataQuest.titleQuest[2]);
         }
         else if (index == "2, 2")
         {
@@ -147,21 +153,34 @@ public class MisiManager : MonoBehaviour
         }
         else if (index == "2, 3")
         {
-            dataQuest.SaveData(2, 2);
             dialogManager[3].SetActive(true);
         }
         else if (index == "3, 1")
         {
+            dataQuest.SaveData(2, 2);
             dataQuest.SaveData(3, 1);
             detectMisi[3].SetActive(true);
+            SpawnNotifMisi(dataQuest.titleQuest[3]);
         }
         else if (index == "3, 2")
         {
             screenStoryManager[4].SetActive(true);
         }
-        else if (index == "3, 3")
+        else if (index == "4, 1")
         {
-            screenStoryManager[4].SetActive(true);
+            dataQuest.SaveData(3, 2);
+            dataQuest.SaveData(4, 1);
+            detectMisi[4].SetActive(true);
+            SpawnNotifMisi(dataQuest.titleQuest[4]);
+        }
+        else if (index == "4, 2")
+        {
+            screenStoryManager[5].SetActive(true);
+        }
+        else if (index == "4, 3")
+        {
+            dataQuest.SaveData(4, 2);
+            print("Misi selesai");
         }
 
         LoadData();
@@ -184,5 +203,10 @@ public class MisiManager : MonoBehaviour
         LoadData();
     }
 
-
+    public void SpawnNotifMisi(string value)
+    {
+        GameObject temp = Instantiate(notifMisiPrefab, UIGameplay.instance.spawnDialogBox);
+        temp.GetComponent<NotifMisi>().titleText.text = value;
+        Destroy(temp.gameObject, 3.5f);
+    }
 }

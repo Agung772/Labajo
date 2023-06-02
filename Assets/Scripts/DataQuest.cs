@@ -28,10 +28,7 @@ public class DataQuest : MonoBehaviour
     {
         for (int i = 0; i < questIndex.Length; i++)
         {
-            if (i != 0)
-            {
-                PlayerPrefs.DeleteKey(_questIndex + i);
-            }
+            PlayerPrefs.DeleteKey(_questIndex + i);
         }
     }
 }

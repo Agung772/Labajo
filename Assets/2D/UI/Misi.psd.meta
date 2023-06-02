@@ -133,7 +133,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 41
-        y: 785
+        y: 1285
         width: 892
         height: 167
       alignment: 0
@@ -154,7 +154,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 54
-        y: 561
+        y: 1061
         width: 892
         height: 137
       alignment: 0
@@ -175,7 +175,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 54
-        y: 456
+        y: 956
         width: 66
         height: 84
       alignment: 0
@@ -196,7 +196,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 167
-        y: 456
+        y: 956
         width: 92
         height: 88
       alignment: 0
@@ -217,7 +217,7 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 51
-        y: 67
+        y: 567
         width: 376
         height: 326
       alignment: 0
@@ -229,6 +229,27 @@ TextureImporter:
       bones: []
       spriteID: a19d1bcddf3aba943af4b2d307b401cf
       internalID: -1511366480
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Misi_5
+      rect:
+        serializedVersion: 2
+        x: 67
+        y: 406
+        width: 866
+        height: 99
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0301f6a6a958b2f4e99516c7c2ebf390
+      internalID: -782652832
       vertices: []
       indices: 
       edges: []
@@ -249,6 +270,7 @@ TextureImporter:
       Misi_2: -1833572966
       Misi_3: 1609084849
       Misi_4: -1511366480
+      Misi_5: -782652832
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1

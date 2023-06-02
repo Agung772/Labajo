@@ -11,6 +11,8 @@ public class UIGameplay : MonoBehaviour
 
     public Transform spawnDialogBox;
     public Transform spawnScreenStory;
+
+    public NotifScreen notifScreen;
     private void Awake()
     {
         instance = this;
@@ -52,6 +54,20 @@ public class UIGameplay : MonoBehaviour
             bookBool = false;
             bookUI.SetActive(false);
             bookUI.GetComponent<BookUI>().ExitBookUI();
+        }
+    }
+
+    public void NotifUI(bool active, string value)
+    {
+        if (active)
+        {
+            notifScreen.gameObject.SetActive(true);
+            notifScreen.notif.text = value;
+        }
+        else
+        {
+            notifScreen.gameObject.SetActive(false);
+            notifScreen.notif.text = null;
         }
     }
 }
