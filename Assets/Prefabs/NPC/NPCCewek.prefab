@@ -27,7 +27,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8379720311119565784}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -165.3, y: -69.07, z: 567.3}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -48,9 +48,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5f921c4e55cb910449585bc91261bd41, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  namaNPC: 
-  dialog: 
-  dialogManagerPrefab: {fileID: 0}
+  namaNPC: Elsi
+  dialogSebelum: Sampah berserakan dimana-mana
+  dialogSesudah: Akhirnya lingkungan jadi bersih
+  dialogManagerPrefab: {fileID: 5367220091986562127, guid: d4280a8b5d2baf4439f81897310606e5, type: 3}
   animator: {fileID: 8379720312404568531}
   angle: 0
   cd: 0

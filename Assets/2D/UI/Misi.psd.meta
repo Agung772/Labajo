@@ -254,6 +254,27 @@ TextureImporter:
       indices: 
       edges: []
       weights: []
+    - serializedVersion: 2
+      name: Misi_6
+      rect:
+        serializedVersion: 2
+        x: 99
+        y: 68
+        width: 301
+        height: 301
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6e68d3f8192260441b1a3900af4079f4
+      internalID: 347756512
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
     outline: []
     physicsShape: []
     bones: []
@@ -271,6 +292,7 @@ TextureImporter:
       Misi_3: 1609084849
       Misi_4: -1511366480
       Misi_5: -782652832
+      Misi_6: 347756512
   spritePackingTag: 
   pSDRemoveMatte: 0
   pSDShowRemoveMatteOption: 1
