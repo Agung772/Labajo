@@ -44,6 +44,12 @@ public class AudioManager : MonoBehaviour
 
         audioSourceBGM.volume = volumeBGM;
         audioSourceSFX.volume = volumeSFX;
+
+        AudioSource[] aS = GameObject.FindObjectsOfType<AudioSource>();
+        for (int i = 0; i < aS.Length; i++)
+        {
+            aS[i].volume = volumeBGM;
+        }
     }
     public void ValueBGM(float value)
     {
@@ -58,5 +64,11 @@ public class AudioManager : MonoBehaviour
         audioSourceSFX.volume = volumeSFX;
         PlayerPrefs.SetFloat(_VolumeSFX, volumeSFX);
         volumeSFX = Mathf.Clamp(volumeSFX, 0, 1);
+
+        AudioSource[] aS = GameObject.FindObjectsOfType<AudioSource>();
+        for (int i = 0; i < aS.Length; i++)
+        {
+            aS[i].volume = volumeBGM;
+        }
     }
 }
