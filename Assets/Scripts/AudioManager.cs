@@ -15,6 +15,14 @@ public class AudioManager : MonoBehaviour
     [SerializeField]
     AudioSource audioSourceSFX;
 
+    public AudioClip
+        homeBGM,
+        gameplayBGM;
+
+    public AudioClip
+        walkSfx,
+        buttonSfx;
+
     string _VolumeBGM = "VolumeBGM";
     string _VolumeSFX = "VolumeSFX";
     string _DefaultVolume = "DefaultVolume";
@@ -33,8 +41,6 @@ public class AudioManager : MonoBehaviour
             PlayerPrefs.SetFloat(_VolumeBGM, 0.6f);
             PlayerPrefs.SetFloat(_VolumeSFX, 0.6f);
         }
-
-
     }
 
     void LoadVolume()
@@ -48,7 +54,11 @@ public class AudioManager : MonoBehaviour
         AudioSource[] aS = GameObject.FindObjectsOfType<AudioSource>();
         for (int i = 0; i < aS.Length; i++)
         {
-            aS[i].volume = volumeBGM;
+            if (aS[i].gameObject.name != "AudioSourceBGM")
+            {
+                aS[i].volume = volumeSFX;
+            }
+
         }
     }
     public void ValueBGM(float value)
@@ -68,7 +78,41 @@ public class AudioManager : MonoBehaviour
         AudioSource[] aS = GameObject.FindObjectsOfType<AudioSource>();
         for (int i = 0; i < aS.Length; i++)
         {
-            aS[i].volume = volumeBGM;
+            if (aS[i].gameObject.name != "AudioSourceBGM")
+            {
+                aS[i].volume = volumeSFX;
+            }
+
         }
     }
+
+    AudioSource walk;
+    public void SetWalkSFX(bool value)
+    {
+        if (value)
+        {
+            if (walk == null)
+            {
+                walk = Instantiate(audioSourceSFX, transform);
+                walk.clip = walkSfx;
+                walk.gameObject.name = "AudioWalk";
+            }
+            walk.Play();
+        }
+        else
+        {
+            if (walk == null)
+            {
+                walk = Instantiate(audioSourceSFX, transform);
+                walk.clip = walkSfx;
+                walk.gameObject.name = "AudioWalk";
+            }
+            walk.Stop();
+        }
+
+    }
+
+    public void HomeBGM() { audioSourceBGM.clip = homeBGM; audioSourceBGM.Play(); }
+    public void GameplayBGM() { audioSourceBGM.clip = gameplayBGM; audioSourceBGM.Play(); }
+    public void ButtonSfx() { audioSourceSFX.PlayOneShot(buttonSfx); }
 }

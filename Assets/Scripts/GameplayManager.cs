@@ -34,6 +34,8 @@ public class GameplayManager : MonoBehaviour
         CursorVisible(false);
         gameSetting.LoadGameSetting();
 
+        AudioManager.instance.GameplayBGM();
+
     }
 
     private void Update()

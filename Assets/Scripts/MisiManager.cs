@@ -191,6 +191,7 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(4, 1);
             detectMisi[4].SetActive(true);
             npc[3].SetActive(false);
+            npc[4].SetActive(true);
             SpawnNotifMisi(dataQuest.titleQuest[4]);
         }
         else if (index == "4, 2")
@@ -206,11 +207,12 @@ public class MisiManager : MonoBehaviour
             print("Misi selesai");
             GameSave.instance.SaveQuest(1);
             questComplate.IsComplate = true;
+            npc[4].SetActive(false);
 
-            Npc[] npc = FindObjectsOfType<Npc>();
-            for (int i = 0; i < npc.Length; i++)
+            Npc[] npcs = FindObjectsOfType<Npc>();
+            for (int i = 0; i < npcs.Length; i++)
             {
-                npc[i].LoadData();
+                npcs[i].LoadData();
             }
         }
 

@@ -20,6 +20,17 @@ public class GameManager : MonoBehaviour
         {
             text[i].font = font;
         }
+
+        Button[] sfxButtons = FindObjectsOfType<Button>();
+        for (int i = 0; i < sfxButtons.Length; i++)
+        {
+
+            if (sfxButtons[i].gameObject.GetComponent<SetButtonAudio>() == null)
+            {
+                sfxButtons[i].gameObject.AddComponent<SetButtonAudio>();
+                print(i + 1);
+            }
+        }
     }
     private void Awake()
     {

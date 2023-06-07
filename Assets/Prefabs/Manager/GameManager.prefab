@@ -609,6 +609,8 @@ MonoBehaviour:
   volumeSFX: 0
   audioSourceBGM: {fileID: 697851640393029202}
   audioSourceSFX: {fileID: 697851641134144612}
+  walkSfx: {fileID: 8300000, guid: 469ad38afd5c2ba4e9c05c0cebfae9c2, type: 3}
+  buttonSfx: {fileID: 8300000, guid: 8257ef1df06aa5b459e9557ba286ba58, type: 3}
 --- !u!1 &697851641913029517
 GameObject:
   m_ObjectHideFlags: 0

@@ -10,6 +10,32 @@ public class Makanan : MonoBehaviour
     public string namaMakanan;
     public string deskripsiMakanan;
 
+    private void OnEnable()
+    {
+        if (namaMakanan == "Kompyang")
+        {
+            if (GameSave.instance.dataQuest.kompyang == 1)
+            {
+                GetComponent<Button>().interactable = true;
+            }
+            else
+            {
+                GetComponent<Button>().interactable = false;
+            }
+        }
+        else if (namaMakanan == "Kolo ")
+        {
+            if (GameSave.instance.dataQuest.kolo == 1)
+            {
+                GetComponent<Button>().interactable = true;
+            }
+            else
+            {
+                GetComponent<Button>().interactable = false;
+            }
+        }
+    }
+
     public void TransferData()
     {
         fotoMakanan = GetComponent<Image>().sprite;

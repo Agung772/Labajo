@@ -107,6 +107,7 @@ public class PlayerController : MonoBehaviour
 
     Vector3 directionC;
     public float angle;
+    string audioWalk;
     void AnimasiPlayer()
     {
         //Input move
@@ -134,10 +135,22 @@ public class PlayerController : MonoBehaviour
 
             animator.SetFloat("IdleX", 0);
             animator.SetFloat("IdleZ", 0);
+
+            if (audioWalk != "Walk")
+            {
+                audioWalk = "Walk";
+                AudioManager.instance.SetWalkSFX(true);
+            }
         }
 
         else
         {
+            if (audioWalk != "Idle")
+            {
+                audioWalk = "Idle";
+                AudioManager.instance.SetWalkSFX(false);
+            }
+
             animator.SetBool("Idle", true);
 
             animator.SetFloat("X", 0);

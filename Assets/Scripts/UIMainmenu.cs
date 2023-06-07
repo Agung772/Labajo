@@ -8,5 +8,7 @@ public class UIMainmenu : MonoBehaviour
     {
         Cursor.visible = true;
         Cursor.lockState = CursorLockMode.None;
+
+        AudioManager.instance.HomeBGM();
     }
 }

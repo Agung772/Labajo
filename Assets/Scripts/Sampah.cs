@@ -13,13 +13,13 @@ public class Sampah : MonoBehaviour
         Destroy(rigidbody);
         gameObject.isStatic = true;
     }
-    private void OnMouseDown()
-    {
-        GameObject temp = Instantiate(GameplayManager.instance.textSampah, transform);
-        temp.transform.parent = transform.parent;
-        temp.transform.eulerAngles = Vector3.zero;
-        temp.transform.position += new Vector3(0, 1, 0);
-        temp.GetComponent<TextSampah>().text.text = "+ Rp." + harga;
-        Destroy(gameObject);
-    }
+    //private void OnMouseDown()
+    //{
+    //    GameObject temp = Instantiate(GameplayManager.instance.textSampah, transform);
+    //    temp.transform.parent = transform.parent;
+    //    temp.transform.eulerAngles = Vector3.zero;
+    //    temp.transform.position += new Vector3(0, 1, 0);
+    //    temp.GetComponent<TextSampah>().text.text = "+ Rp." + harga;
+    //    Destroy(gameObject);
+    //}
 }

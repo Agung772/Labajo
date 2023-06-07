@@ -4,13 +4,22 @@ using UnityEngine;
 
 public class DataQuest : MonoBehaviour
 {
+    public float kompyang;
+    public float kolo;
+
     public string[] titleQuest;
     public float[] questIndex;
 
-    string _questIndex = "_questIndex";
+    string 
+        _questIndex = "_questIndex",
+        _kompyang = "_kompyang",
+        _kolo = "_kolo";
 
     public void LoadData()
     {
+        kompyang = PlayerPrefs.GetFloat(_kompyang);
+        kolo = PlayerPrefs.GetFloat(_kolo);
+
         questIndex = new float[titleQuest.Length];
         for (int i = 0; i < questIndex.Length; i++)
         {
@@ -26,6 +35,9 @@ public class DataQuest : MonoBehaviour
 
     public void DeleteData()
     {
+        PlayerPrefs.DeleteKey(_kompyang);
+        PlayerPrefs.DeleteKey(_kolo);
+
         for (int i = 0; i < questIndex.Length; i++)
         {
             PlayerPrefs.DeleteKey(_questIndex + i);
