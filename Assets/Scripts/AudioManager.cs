@@ -21,7 +21,8 @@ public class AudioManager : MonoBehaviour
 
     public AudioClip
         walkSfx,
-        buttonSfx;
+        buttonSfx,
+        interaksiSfx;
 
     string _VolumeBGM = "VolumeBGM";
     string _VolumeSFX = "VolumeSFX";
@@ -96,6 +97,7 @@ public class AudioManager : MonoBehaviour
                 walk = Instantiate(audioSourceSFX, transform);
                 walk.clip = walkSfx;
                 walk.gameObject.name = "AudioWalk";
+                walk.loop = true;
             }
             walk.Play();
         }
@@ -106,6 +108,7 @@ public class AudioManager : MonoBehaviour
                 walk = Instantiate(audioSourceSFX, transform);
                 walk.clip = walkSfx;
                 walk.gameObject.name = "AudioWalk";
+                walk.loop = true;
             }
             walk.Stop();
         }
@@ -115,4 +118,5 @@ public class AudioManager : MonoBehaviour
     public void HomeBGM() { audioSourceBGM.clip = homeBGM; audioSourceBGM.Play(); }
     public void GameplayBGM() { audioSourceBGM.clip = gameplayBGM; audioSourceBGM.Play(); }
     public void ButtonSfx() { audioSourceSFX.PlayOneShot(buttonSfx); }
+    public void InteraksiSfx() { audioSourceSFX.PlayOneShot(interaksiSfx); }
 }

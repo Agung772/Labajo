@@ -91,11 +91,13 @@ public class PlayerController : MonoBehaviour
         //Rotasi ngikutin camera
         designKarakter.rotation = Quaternion.Euler(0, camera.eulerAngles.y, 0);
 
-        if (Input.GetKey(KeyCode.Space) && operation)
+        if (Input.GetKeyDown(KeyCode.Space) && operation && checkGround.ground)
         {
+            checkGround.ground = false;
             directionY = jumpForce;
             animator.SetTrigger("Jump");
             animator.SetBool("Unjump", false);
+            AudioManager.instance.SetWalkSFX(false);
         }
 
         directionY += gravity * Time.deltaTime;
@@ -105,15 +107,27 @@ public class PlayerController : MonoBehaviour
         characterController.Move(velocity * Time.deltaTime);
     }
 
+    public void GroundEnter()
+    {
+        animator.SetBool("Unjump", true);
+
+        if (moveAnimasi > 0)
+        {
+            AudioManager.instance.SetWalkSFX(true);
+        }
+
+    }
+
     Vector3 directionC;
     public float angle;
     string audioWalk;
+    float moveAnimasi;
     void AnimasiPlayer()
     {
         //Input move
         float horizontal = Input.GetAxisRaw("Horizontal");
         float vertical = Input.GetAxisRaw("Vertical");
-        float moveAnimasi = new Vector3(horizontal, 0, vertical).magnitude;
+        moveAnimasi = new Vector3(horizontal, 0, vertical).magnitude;
 
 
         //Calculate angle player
@@ -129,6 +143,12 @@ public class PlayerController : MonoBehaviour
 
         if (moveAnimasi > 0 && operation)
         {
+            if (checkGround.ground)
+            {
+                animator.SetBool("Unjump", true);
+                print("Bla");
+            }
+
             animator.SetBool("Idle", false);
             animator.SetFloat("X", horizontal);
             animator.SetFloat("Z", vertical);
@@ -136,7 +156,7 @@ public class PlayerController : MonoBehaviour
             animator.SetFloat("IdleX", 0);
             animator.SetFloat("IdleZ", 0);
 
-            if (audioWalk != "Walk")
+            if (audioWalk != "Walk" && checkGround.ground)
             {
                 audioWalk = "Walk";
                 AudioManager.instance.SetWalkSFX(true);

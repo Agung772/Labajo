@@ -9,7 +9,7 @@ public class CheckGround : MonoBehaviour
     private void OnTriggerEnter(Collider other)
     {
         ground = true;
-        PlayerController.instance.animator.SetBool("Unjump", true);
+        PlayerController.instance.GroundEnter();
     }
 
     private void OnTriggerExit(Collider other)

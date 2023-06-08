@@ -22,6 +22,7 @@ public class DialogManager : MonoBehaviour
     bool isUse;
 
     public UnityEvent ExitTrigger;
+
     private void Start()
     {
         StartDialogBox();
@@ -33,6 +34,8 @@ public class DialogManager : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartDialogBox();
+
+            AudioManager.instance.ButtonSfx();
         }
     }
 

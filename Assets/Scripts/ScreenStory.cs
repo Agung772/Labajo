@@ -20,6 +20,7 @@ public class ScreenStory : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space))
         {
             StartScreenStory();
+            AudioManager.instance.ButtonSfx();
         }
     }
 

@@ -46,7 +46,7 @@ AudioSource:
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
-  Loop: 0
+  Loop: 1
   Mute: 0
   Spatialize: 0
   SpatializePostEffects: 0
@@ -609,8 +609,11 @@ MonoBehaviour:
   volumeSFX: 0
   audioSourceBGM: {fileID: 697851640393029202}
   audioSourceSFX: {fileID: 697851641134144612}
-  walkSfx: {fileID: 8300000, guid: 469ad38afd5c2ba4e9c05c0cebfae9c2, type: 3}
+  homeBGM: {fileID: 8300000, guid: 1657908b95a006c4aa43a73f09d7b725, type: 3}
+  gameplayBGM: {fileID: 8300000, guid: 52acef835af64784088f8f3aaa7c8b06, type: 3}
+  walkSfx: {fileID: 8300000, guid: 9377ebf317b1b6041a780ff905cd088b, type: 3}
   buttonSfx: {fileID: 8300000, guid: 8257ef1df06aa5b459e9557ba286ba58, type: 3}
+  interaksiSfx: {fileID: 8300000, guid: 789f1e1ed21b2e941a9554c95cfedae4, type: 3}
 --- !u!1 &697851641913029517
 GameObject:
   m_ObjectHideFlags: 0
@@ -917,6 +920,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 11923a7ee2920564c9d1330d29d2ae5e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  kompyang: 0
+  kolo: 0
   titleQuest:
   - 
   - Pergi ke kota dan mencari pekerjaan

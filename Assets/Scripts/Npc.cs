@@ -91,30 +91,38 @@ public class Npc : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         if (other.CompareTag("Player")) UIGameplay.instance.NotifUI(false, null);
+        use = false;
     }
 
-    public bool cd;
+    public bool cd, use;
     private void OnTriggerStay(Collider other)
     {
-        if (other.CompareTag("Player"))
+        if (!use)
         {
-            if (Input.GetKeyDown(KeyCode.F) && !cd)
+
+            if (other.CompareTag("Player"))
             {
-                cd = true;
-
-                StartCoroutine(Coroutine());
-                IEnumerator Coroutine()
+                if (Input.GetKeyDown(KeyCode.F) && !cd)
                 {
-                    GameObject temp = Instantiate(dialogManagerPrefab, transform);
-                    temp.GetComponent<DialogManager>().SetDialog(namaNPC, dialog);
-                    yield return new WaitForSeconds(1);
-                    cd = false;
+                    cd = true;
+                    use = true;
+                    StartCoroutine(Coroutine());
+                    IEnumerator Coroutine()
+                    {
+                        GameObject temp = Instantiate(dialogManagerPrefab, transform);
+                        temp.GetComponent<DialogManager>().SetDialog(namaNPC, dialog);
+                        yield return new WaitForSeconds(1);
+                        cd = false;
+                    }
+
+                    AudioManager.instance.InteraksiSfx();
+
+
                 }
-
-
             }
+
+            if (cd) { UIGameplay.instance.NotifUI(false, null); }
         }
 
-        if (cd) { UIGameplay.instance.NotifUI(false, null); }
     }
 }
