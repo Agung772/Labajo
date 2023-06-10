@@ -10,7 +10,8 @@ public class DataQuest : MonoBehaviour
     public string[] titleQuest;
     public float[] questIndex;
 
-    string 
+    [HideInInspector]
+    public string 
         _questIndex = "_questIndex",
         _kompyang = "_kompyang",
         _kolo = "_kolo";

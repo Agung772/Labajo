@@ -47,26 +47,31 @@ public class GameplayManager : MonoBehaviour
         if (Input.GetKeyUp(KeyCode.Escape))
         {
             UIGameplay.instance.BookUI();
+
+            AudioManager.instance.ButtonSfx();
         }
         if (Input.GetKeyDown(KeyCode.M))
         {
             UIGameplay.instance.MapUI();
+
+
+            AudioManager.instance.ButtonSfx();
         }
 
-        if (Input.GetKeyDown(KeyCode.Equals))
-        {
+        //if (Input.GetKeyDown(KeyCode.Equals))
+        //{
 
-            Time.timeScale += 0.1f;
-            print(Time.timeScale);
-        }
-        if (Input.GetKeyDown(KeyCode.Minus))
-        {
-            if (Time.timeScale > 0)
-            {
-                Time.timeScale -= 0.1f;
-            }
-            print(Time.timeScale);
-        }
+        //    Time.timeScale += 0.1f;
+        //    print(Time.timeScale);
+        //}
+        //if (Input.GetKeyDown(KeyCode.Minus))
+        //{
+        //    if (Time.timeScale > 0)
+        //    {
+        //        Time.timeScale -= 0.1f;
+        //    }
+        //    print(Time.timeScale);
+        //}
     }
 
     bool cursorPlayerAuto;

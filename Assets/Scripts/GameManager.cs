@@ -11,6 +11,9 @@ public class GameManager : MonoBehaviour
     [SerializeField]
     Animator transisi;
 
+    public GameObject notifPrefab;
+    [SerializeField] Transform spawn;
+
     public Font font;
     public bool bla;
     private void OnValidate()
@@ -99,6 +102,16 @@ public class GameManager : MonoBehaviour
     public void SetGrafik(int value)
     {
         QualitySettings.SetQualityLevel(value);
+    }
+
+    public void SpawnNotif(string value)
+    {
+        if (spawn.childCount != 0)
+        {
+            Destroy(spawn.GetChild(0).gameObject);
+        }
+        GameObject temp = Instantiate(notifPrefab, spawn);
+        temp.GetComponent<Notif>().notifText.text = value;
     }
 
 }

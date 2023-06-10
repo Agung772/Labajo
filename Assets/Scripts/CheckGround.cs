@@ -8,8 +8,17 @@ public class CheckGround : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        ground = true;
-        PlayerController.instance.GroundEnter();
+        //ground = true;
+
+    }
+
+    private void OnTriggerStay(Collider other)
+    {
+        if (!ground)
+        {
+            PlayerController.instance.GroundEnter();
+            ground = true;
+        }
     }
 
     private void OnTriggerExit(Collider other)

@@ -22,7 +22,9 @@ public class AudioManager : MonoBehaviour
     public AudioClip
         walkSfx,
         buttonSfx,
-        interaksiSfx;
+        interaksiSfx,
+        lompat1Sfx,
+        lompat2Sfx;
 
     string _VolumeBGM = "VolumeBGM";
     string _VolumeSFX = "VolumeSFX";
@@ -30,7 +32,8 @@ public class AudioManager : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null) instance = this;
+
 
         LoadVolume();
     }
@@ -119,4 +122,6 @@ public class AudioManager : MonoBehaviour
     public void GameplayBGM() { audioSourceBGM.clip = gameplayBGM; audioSourceBGM.Play(); }
     public void ButtonSfx() { audioSourceSFX.PlayOneShot(buttonSfx); }
     public void InteraksiSfx() { audioSourceSFX.PlayOneShot(interaksiSfx); }
+    public void Lompat1Sfx() { audioSourceSFX.PlayOneShot(lompat1Sfx); }
+    public void Lompat2Sfx() { audioSourceSFX.PlayOneShot(lompat2Sfx); }
 }

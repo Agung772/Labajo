@@ -133,6 +133,9 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(1, 1);
             dialogManager[1].SetActive(true);
             npc[1].SetActive(true);
+
+            PlayerPrefs.SetFloat(GameSave.instance.dataQuest._kompyang, 1);
+            GameSave.instance.dataQuest.LoadData();
         }
         else if (index == "1, 2")
         {
@@ -142,7 +145,7 @@ public class MisiManager : MonoBehaviour
                 detectMisi[1].SetActive(true);
                 SpawnNotifMisi(dataQuest.titleQuest[1]);
                 yield return new WaitForSeconds(3);
-                SpawnNotifMisi("Tekan Esc untuk melihat peta dan misi");
+                SpawnNotifMisi("Tekan Esc untuk melihat misi, makanan dan peta");
             }
 
         }
@@ -208,6 +211,18 @@ public class MisiManager : MonoBehaviour
             GameSave.instance.SaveQuest(1);
             questComplate.IsComplate = true;
             npc[4].SetActive(false);
+
+
+            StartCoroutine(Coroutine());
+            IEnumerator Coroutine()
+            {
+                yield return new WaitForSeconds(3);
+                SpawnNotifMisi("Kamu mendapatkan makanan kolo karena berhasil menyelesaikan misi");
+                PlayerPrefs.SetFloat(GameSave.instance.dataQuest._kolo, 1);
+                GameSave.instance.dataQuest.LoadData();
+
+            }
+
 
             Npc[] npcs = FindObjectsOfType<Npc>();
             for (int i = 0; i < npcs.Length; i++)

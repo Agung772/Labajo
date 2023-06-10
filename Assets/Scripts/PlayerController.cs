@@ -98,6 +98,7 @@ public class PlayerController : MonoBehaviour
             animator.SetTrigger("Jump");
             animator.SetBool("Unjump", false);
             AudioManager.instance.SetWalkSFX(false);
+            AudioManager.instance.Lompat1Sfx();
         }
 
         directionY += gravity * Time.deltaTime;
@@ -110,7 +111,7 @@ public class PlayerController : MonoBehaviour
     public void GroundEnter()
     {
         animator.SetBool("Unjump", true);
-
+        AudioManager.instance.Lompat2Sfx();
         if (moveAnimasi > 0)
         {
             AudioManager.instance.SetWalkSFX(true);
@@ -146,7 +147,8 @@ public class PlayerController : MonoBehaviour
             if (checkGround.ground)
             {
                 animator.SetBool("Unjump", true);
-                print("Bla");
+
+                
             }
 
             animator.SetBool("Idle", false);

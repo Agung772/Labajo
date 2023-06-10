@@ -7,6 +7,8 @@ public class GameSave : MonoBehaviour
     public static GameSave instance;
 
     //Value save
+    public float isSave;
+
     public Vector3 posisiPlayer;
     public float koin;
     public float questComplate;
@@ -30,6 +32,8 @@ public class GameSave : MonoBehaviour
     //Player
     [HideInInspector]
     public string
+        _IsSave = "_IsSave",
+
         _PosisiPlayerX = "PosisiPlayerX",
         _PosisiPlayerY = "PosisiPlayerY",
         _PosisiPlayerZ = "PosisiPlayerZ",
@@ -48,7 +52,7 @@ public class GameSave : MonoBehaviour
 
     private void Awake()
     {
-        instance = this;
+        if (instance == null) instance = this;
 
         DefaultData();
         LoadData();
@@ -79,8 +83,10 @@ public class GameSave : MonoBehaviour
 
     }
 
-    void LoadData()
+    public void LoadData()
     {
+        isSave = PlayerPrefs.GetFloat(_IsSave);
+
         posisiPlayer = new Vector3
             (PlayerPrefs.GetFloat(_PosisiPlayerX),
             PlayerPrefs.GetFloat(_PosisiPlayerY),
@@ -146,6 +152,8 @@ public class GameSave : MonoBehaviour
 
     public void DeleteData()
     {
+        PlayerPrefs.DeleteKey(_IsSave);
+
         PlayerPrefs.DeleteKey(_PosisiPlayerX);
         PlayerPrefs.DeleteKey(_PosisiPlayerY);
         PlayerPrefs.DeleteKey(_PosisiPlayerZ);
@@ -156,7 +164,7 @@ public class GameSave : MonoBehaviour
         PlayerPrefs.DeleteKey(_DefaultGame);
 
         dataQuest.DeleteData();
-
+        DefaultData();
 
     }
 }

@@ -11,8 +11,13 @@ public class DetectMisi : MonoBehaviour
     {
         if (other.CompareTag("Player"))
         {
+            AudioManager.instance.InteraksiSfx();
+
             Destroy(gameObject);
             unityEvent.Invoke();
+
+
+
         }
     }
 }
