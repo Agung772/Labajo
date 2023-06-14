@@ -16,7 +16,7 @@ public class GameSave : MonoBehaviour
 
     //Setting
     [Space]
-    public float grafik;
+    public float sizeScreen;
     public float sensitifMouse;
     public float kecerahanMatahari;
     public float fieldOfView;
@@ -44,7 +44,7 @@ public class GameSave : MonoBehaviour
     //Setting
     [HideInInspector]
     public string
-        _Grafik = "Grafik",
+        _SizeScreen = "_SizeScreen",
         _SensitifMouse = "SensitifMouse",
         _KecerahanMatahari = "KecerahanMatahari",
         _FieldOfView = "FieldOfView",
@@ -62,17 +62,30 @@ public class GameSave : MonoBehaviour
 
     }
 
+    public void DebugData(UnityEngine.UI.Text template, Transform parent)
+    {
+        UnityEngine.UI.Text temp = Instantiate(template, parent);
+        temp.text = _IsSave + isSave;
+        temp.rectTransform.localPosition = new Vector3(0, temp.rectTransform.localPosition.y + 100, 0);
+
+        UnityEngine.UI.Text temp1 = Instantiate(template, parent);
+        temp1.text = _DefaultGame + PlayerPrefs.GetFloat(_DefaultSetting);
+        temp1.rectTransform.localPosition = new Vector3(0, temp1.rectTransform.localPosition.y + 200, 0);
+    }
+
     void DefaultData()
     {
         if (PlayerPrefs.GetFloat(_DefaultSetting) == 0)
         {
             PlayerPrefs.SetFloat(_DefaultSetting, 1);
 
-            SaveSetting(_Grafik, 2);
-            SaveSetting(_SensitifMouse, GameSetting.instance.sensitifMouseDefault);
-            SaveSetting(_KecerahanMatahari, GameSetting.instance.kecerahanMatahariDefault);
-            SaveSetting(_FieldOfView, GameSetting.instance.fieldOfViewDefault);
+            SaveSetting(_SizeScreen, 0);
+            SaveSetting(_SensitifMouse, 2);
+            SaveSetting(_KecerahanMatahari, 2);
+            SaveSetting(_FieldOfView, 60);
             SaveSetting(_Bayangan, 1);
+
+            SaveSizeScreen(11);
         }
 
         if (PlayerPrefs.GetFloat(_DefaultGame) == 0)
@@ -96,7 +109,7 @@ public class GameSave : MonoBehaviour
         questComplate = PlayerPrefs.GetFloat(_QuestComplate);
 
         //Setting
-        grafik = PlayerPrefs.GetFloat(_Grafik);
+        sizeScreen = PlayerPrefs.GetFloat(_SizeScreen);
         sensitifMouse = PlayerPrefs.GetFloat(_SensitifMouse);
         kecerahanMatahari = PlayerPrefs.GetFloat(_KecerahanMatahari);
         fieldOfView = PlayerPrefs.GetFloat(_FieldOfView);
@@ -123,10 +136,10 @@ public class GameSave : MonoBehaviour
 
     public void SaveSetting(string nameSave, float value)
     {
-        if (nameSave == _Grafik)
+        if (nameSave == _SizeScreen)
         {
-            PlayerPrefs.SetFloat(_Grafik, value);
-            grafik = value;
+            PlayerPrefs.SetFloat(_SizeScreen, value);
+            sizeScreen = value;
         }
         else if (nameSave == _SensitifMouse)
         {
@@ -149,7 +162,12 @@ public class GameSave : MonoBehaviour
             bayangan = value;
         }
     }
+    public void SaveSizeScreen(float value)
+    {
+        PlayerPrefs.SetFloat(_SizeScreen, value);
 
+        LoadData();
+    }
     public void DeleteData()
     {
         PlayerPrefs.DeleteKey(_IsSave);
@@ -164,7 +182,10 @@ public class GameSave : MonoBehaviour
         PlayerPrefs.DeleteKey(_DefaultGame);
 
         dataQuest.DeleteData();
+
         DefaultData();
+        LoadData();
+        dataQuest.LoadData();
 
     }
 }

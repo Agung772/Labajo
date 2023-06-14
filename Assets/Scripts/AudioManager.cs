@@ -39,16 +39,18 @@ public class AudioManager : MonoBehaviour
     }
     private void Start()
     {
+
+    }
+
+    public void LoadVolume()
+    {
         if (PlayerPrefs.GetFloat(_DefaultVolume) == 0)
         {
             PlayerPrefs.SetFloat(_DefaultVolume, 1);
-            PlayerPrefs.SetFloat(_VolumeBGM, 0.6f);
+            PlayerPrefs.SetFloat(_VolumeBGM, 0.1f);
             PlayerPrefs.SetFloat(_VolumeSFX, 0.6f);
         }
-    }
 
-    void LoadVolume()
-    {
         volumeBGM = PlayerPrefs.GetFloat(_VolumeBGM);
         volumeSFX = PlayerPrefs.GetFloat(_VolumeSFX);
 

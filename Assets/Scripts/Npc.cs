@@ -85,7 +85,7 @@ public class Npc : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.CompareTag("Player") && !cd) UIGameplay.instance.NotifUI(true, "Tekan F untuk interaksi");
+        if (other.CompareTag("Player") && !cd && !use) UIGameplay.instance.NotifUI(true, "Tekan F untuk interaksi");
 
     }
     private void OnTriggerExit(Collider other)

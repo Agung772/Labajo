@@ -56,6 +56,8 @@ public class GameSetting : MonoBehaviour
 
     public FieldInfo lwrpaShadowField = null;
 
+    Resolution[] resolutions;
+
     private void Awake()
     {
         instance = this;
@@ -67,6 +69,8 @@ public class GameSetting : MonoBehaviour
 
     public void LoadGameSetting()
     {
+        AudioManager.instance.LoadVolume();
+
         volumeBGMSlider.value = AudioManager.instance.volumeBGM;
         volumeBGMText.text = (volumeBGMSlider.value * 100).ToString("F1") + "%";
         volumeSFXSlider.value = AudioManager.instance.volumeSFX;
@@ -84,8 +88,8 @@ public class GameSetting : MonoBehaviour
         fieldOfViewSlider.value = fieldOfView / 100;
         fieldOfViewText.text = (fieldOfViewSlider.value * 100).ToString("F0");
 
-        if (GameSave.instance.bayangan == 1) bayanganToggle.isOn = true;
-        else bayanganToggle.isOn = false;
+        if (GameSave.instance.bayangan == 1) { bayanganToggle.isOn = true; SetBayangan(true); }
+        else { bayanganToggle.isOn = false; SetBayangan(false); }
 
         if (GameplayManager.instance != null)
         {
@@ -97,14 +101,29 @@ public class GameSetting : MonoBehaviour
 
 
         }
+
+        //Screen
+        resolutions = Screen.resolutions;
+        sizeScreenDD.ClearOptions();
+
+        List<string> options = new List<string>();
+
+        for (int i = 0; i < resolutions.Length; i++)
+        {
+            if (i > 9)
+            {
+                string resuliton = resolutions[i].width + " x " + resolutions[i].height;
+                options.Add(resuliton);
+                print(i);
+            }
+
+
+        }
+        sizeScreenDD.AddOptions(options);
+        sizeScreenDD.value = (int)GameSave.instance.sizeScreen;
+        sizeScreenDD.RefreshShownValue();
     }
 
-    public void SetGrafik(int value)
-    {
-        QualitySettings.SetQualityLevel(value);
-
-        GameSave.instance.SaveSetting(GameSave.instance._Grafik, value);
-    }
 
     public void SetBGM(float value)
     {
@@ -201,8 +220,11 @@ public class GameSetting : MonoBehaviour
 
     }
 
-    public void SetSizeScreen()
+    public void SetSizeScreen(int value)
     {
-
+        Resolution resolution = resolutions[value + 10];
+        Screen.SetResolution(resolution.width, resolution.height, Screen.fullScreen);
+        print(resolution);
+        GameSave.instance.SaveSizeScreen(value);
     }
 }

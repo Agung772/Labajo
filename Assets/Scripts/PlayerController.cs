@@ -37,13 +37,13 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Start()
     {
-        yield return new WaitForSeconds(0.1f);
+        yield return new WaitForSeconds(0.2f);
         if (operation)
         {
             operation = false;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
             transform.position = GameSave.instance.posisiPlayer;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
             operation = true;
         }
         else
@@ -93,12 +93,14 @@ public class PlayerController : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space) && operation && checkGround.ground)
         {
+            checkGround.Cd();
             checkGround.ground = false;
             directionY = jumpForce;
             animator.SetTrigger("Jump");
             animator.SetBool("Unjump", false);
             AudioManager.instance.SetWalkSFX(false);
             AudioManager.instance.Lompat1Sfx();
+
         }
 
         directionY += gravity * Time.deltaTime;
@@ -260,9 +262,9 @@ public class PlayerController : MonoBehaviour
         IEnumerator Coroutine()
         {
             operation = false;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
             transform.position = setV3;
-            yield return new WaitForSeconds(0.1f);
+            yield return new WaitForSeconds(0.2f);
             operation = true;
         }
     }

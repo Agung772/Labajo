@@ -14,6 +14,8 @@ public class MisiManager : MonoBehaviour
     public GameObject[] screenStoryManager;
     public GameObject[] npc;
 
+    public GameObject NPCPabrik;
+
     private void Start()
     {
         StartData();
@@ -132,7 +134,7 @@ public class MisiManager : MonoBehaviour
         {
             dataQuest.SaveData(1, 1);
             dialogManager[1].SetActive(true);
-            npc[1].SetActive(true);
+
 
             PlayerPrefs.SetFloat(GameSave.instance.dataQuest._kompyang, 1);
             GameSave.instance.dataQuest.LoadData();
@@ -155,6 +157,7 @@ public class MisiManager : MonoBehaviour
         }
         else if (index == "1, 4")
         {
+            npc[1].SetActive(true);
             dialogManager[2].SetActive(true);
         }
         else if (index == "2, 1")
@@ -163,8 +166,7 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(1, 2);
             dataQuest.SaveData(2, 1);
             detectMisi[2].SetActive(true);
-            npc[1].SetActive(false);
-            npc[2].SetActive(true);
+
             SpawnNotifMisi(dataQuest.titleQuest[2]);
         }
         else if (index == "2, 2")
@@ -173,6 +175,8 @@ public class MisiManager : MonoBehaviour
         }
         else if (index == "2, 3")
         {
+            npc[1].SetActive(false);
+            npc[2].SetActive(true);
             dialogManager[3].SetActive(true);
         }
         else if (index == "3, 1")
@@ -180,26 +184,31 @@ public class MisiManager : MonoBehaviour
             dataQuest.SaveData(2, 2);
             dataQuest.SaveData(3, 1);
             detectMisi[3].SetActive(true);
-            npc[2].SetActive(false);
-            npc[3].SetActive(true);
             SpawnNotifMisi(dataQuest.titleQuest[3]);
+            NPCPabrik.SetActive(true);
         }
         else if (index == "3, 2")
         {
             screenStoryManager[4].SetActive(true);
+
+
         }
         else if (index == "4, 1")
         {
             dataQuest.SaveData(3, 2);
             dataQuest.SaveData(4, 1);
             detectMisi[4].SetActive(true);
-            npc[3].SetActive(false);
-            npc[4].SetActive(true);
             SpawnNotifMisi(dataQuest.titleQuest[4]);
+            NPCPabrik.SetActive(false);
+            npc[2].SetActive(false);
+            //npc[3].SetActive(true);
+            npc[4].SetActive(true);
         }
         else if (index == "4, 2")
         {
             screenStoryManager[5].SetActive(true);
+
+
         }
         else if (index == "4, 3")
         {

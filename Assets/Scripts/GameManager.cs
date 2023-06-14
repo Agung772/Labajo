@@ -49,7 +49,6 @@ public class GameManager : MonoBehaviour
             Destroy(gameObject);
         }
 
-
     }
     private void Start()
     {
@@ -66,7 +65,12 @@ public class GameManager : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Delete))
         {
-            GameSave.instance.DeleteData();
+            //GameSave.instance.DeleteData();
+            PlayerPrefs.DeleteAll();
+        }
+        if (Input.GetKeyDown(KeyCode.End))
+        {
+            Debug();
         }
     }
 
@@ -112,6 +116,23 @@ public class GameManager : MonoBehaviour
         }
         GameObject temp = Instantiate(notifPrefab, spawn);
         temp.GetComponent<Notif>().notifText.text = value;
+    }
+
+    public GameObject debugUI;
+    bool debug;
+    public void Debug()
+    {
+        if (!debug)
+        {
+            debug = true;
+            debugUI.SetActive(true);
+            GameSave.instance.DebugData(debugUI.transform.GetChild(1).GetComponent<Text>(), debugUI.transform);
+        }
+        else
+        {
+            debug = false;
+            debugUI.SetActive(false);
+        }
     }
 
 }

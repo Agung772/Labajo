@@ -12,10 +12,14 @@ public class UIGameplay : MonoBehaviour
     public Transform spawnDialogBox;
     public Transform spawnScreenStory;
 
+    public GameSetting gameSetting;
+
     public NotifScreen notifScreen;
     private void Awake()
     {
         instance = this;
+
+        gameSetting.LoadGameSetting();
     }
 
     bool bookBool;

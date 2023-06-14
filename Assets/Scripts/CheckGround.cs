@@ -5,6 +5,7 @@ using UnityEngine;
 public class CheckGround : MonoBehaviour
 {
     public bool ground;
+    public bool cd;
 
     private void OnTriggerEnter(Collider other)
     {
@@ -14,7 +15,7 @@ public class CheckGround : MonoBehaviour
 
     private void OnTriggerStay(Collider other)
     {
-        if (!ground)
+        if (!ground && !cd)
         {
             PlayerController.instance.GroundEnter();
             ground = true;
@@ -24,5 +25,17 @@ public class CheckGround : MonoBehaviour
     private void OnTriggerExit(Collider other)
     {
         ground = false;
+    }
+
+    public void Cd()
+    {
+        StartCoroutine(Coroutine());
+        IEnumerator Coroutine()
+        {
+            cd = true;
+            yield return new WaitForSeconds(0.5f);
+            cd = false;
+        }
+
     }
 }

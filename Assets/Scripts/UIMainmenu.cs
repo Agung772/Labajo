@@ -32,8 +32,8 @@ public class UIMainmenu : MonoBehaviour
     public void YesNewgame()
     {
         GameSave.instance.DeleteData();
-        GameSave.instance.LoadData();
         PlayerPrefs.SetFloat(GameSave.instance._IsSave, 1);
+        GameSave.instance.LoadData();
         GameManager.instance.GetComponent<UIManager>().PindahScene("Gameplay");
     }
 
@@ -48,5 +48,10 @@ public class UIMainmenu : MonoBehaviour
             GameManager.instance.SpawnNotif("Belom ada data yang tersimpan, Mulai game yuk");
 
         }
+    }
+
+    public void Quitgame()
+    {
+        Application.Quit();
     }
 }
